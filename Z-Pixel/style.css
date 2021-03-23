@@ -4,7 +4,7 @@
 }
 @font-face{
      font-family: "OpenSans";
-    src: url(Fonts/OpenSans-Light.ttf) format("truetype")
+    src: url(Fonts/OpenSans-Regular.ttf) format("truetype")
 }
 a{
 	text-decoration: none;
@@ -19,50 +19,41 @@ ul{
 .about-us ul {
 	position: relative;
 	width: 1120px;
+	height: 36px;
 	margin: 0 auto;
 	list-style: none;
 display: flex;
-padding-top: 10px;
-padding-bottom: 13px;
+align-items: center;
+
 
 }
-.about-us a:not(:nth-child(5)){
-	padding-left: 12px;
-	padding-right:10px;
-}
-
 .about-us li{
-	display: flex;
-	align-items: center;
-	margin-right: 5px;
-}
-.about-us li:nth-child(3){
-padding-right: 8px;
-}
-.about-us li:first-child{
-margin-left: 5px;
-	margin-right: 76px;
-}
-.about-us a:nth-child(3){
-
-	padding-right: 12px;
-}
-.about-us li:last-child{
-position: absolute;
-	right: 5px;
-top:12px;
+vertical-align: middle;
+padding-left: 12.8px;
+padding-right: 11px;
 }
 .about-us a{
+	display: flex;
+	align-items: center;
+	color:#1D1D1B;
 	font-family: Open Sans;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
 line-height: 100%;
 text-align: center;
-	color:#1D1D1B;
+}
+.about-us a:first-child{
+	margin-right: 76px;
+margin-left: 4px;
+}
+.about-us a:nth-child(4){
+margin-left: 13px;
+margin-right: 354px;
 }
 .second-line{
 	display: flex;
+	padding-top: 3px;
 }
 .second-line span{
 	background-color: #E0001B;
@@ -73,7 +64,7 @@ text-align: center;
 	color: #fff;
 	font-family: Open Sans;
 font-style: normal;
-font-weight: 600;
+font-weight: normal;
 font-size: 12px;
 letter-spacing: 0.05em;
 
@@ -81,16 +72,15 @@ letter-spacing: 0.05em;
 .logo{
 	padding-top: 45px;
 }
-#serch-form{
+.serch-form{
     width: 412px;
 height: 48px;
 display: flex;
-border: 1px solid #D5D5D5;
 margin-left: 56px;
 margin-right:46px;
 margin-top:30px;
 }
-#serch-form .serch{
+.serch-form .serch{
     border: none;
     width: 356px;
     height: 48px;
@@ -101,9 +91,11 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 100%;
+color: rgba(0, 0, 0, 0.4);
 letter-spacing: 0.05em;
+border: 1px solid #D5D5D5;
 }
-#serch-form .but{
+.serch-form .but{
     background-color: #E0001B;
     background-image: url(img/Frame.png);
     background-repeat: no-repeat;
@@ -115,28 +107,44 @@ outline: none;
 }
 .second-line ul{
 	display: flex;
-
+	width: 388px;
 }
-.second-line li{
-list-style: none;
+.second-line a{
 height: 48px;
 margin-top:30px;
-
-padding-left: 16px;
-padding-right: 15px;
 display: flex;
 align-items: center;
-justify-content: center;
-
 }
-.second-line li:hover{
+.second-line a:first-child{
+padding-right: 17px;
+padding-left:15px;
+}
+.second-line a:first-child li{
+padding-right: 16px;
+padding-left:15px;
+}
+.second-line a:nth-child(2){
+padding-right: 17px;
+padding-left:16px;
+}
+.second-line a:nth-child(2) li{
+
+padding-left:12.37px;
+}
+.second-line a:last-child{
+padding-right: 17px;
+padding-left:17px;
+}
+.second-line a:last-child li{
+padding-right: 15px;
+padding-left:14px;
+}
+.second-line a:hover{
 	transition: 1s;
 	background-color: #f8f8f8;
 }
-.second-line li:nth-child(2){
-padding-right: 0px;
-}
-.second-line li> a{
+
+.second-line a> li{
 	color: #000;
 	font-family: Open Sans;
 font-style: normal;
@@ -146,29 +154,25 @@ line-height: 100%;
 text-align: center;
 margin-top: 16px;
 margin-bottom: 18px;
-padding-right: 15px;
-padding-left: 15px;
 }
 .nav-bar{
-
-	margin-top: 28px;
+	margin-top: 29px;
 	background-color: #f8f8f8;
 }
 .nav-bar nav ul{
 	display: flex;
 justify-content: space-between;
-padding-right:15px;
+
+align-items: center;
 }
-.nav-bar li{
+.nav-bar a{
 	display: flex;
 	height: 48px;
 	align-items: center;
-	text-align: center;
-	padding-left: 16px;
+	justify-content: center;
+
 }
-.nav-bar a{
-	padding-right: 7px;
-	padding-left: 10px;
+.nav-bar li:not(:first-child){
 	color: #1D1D1B;
 	font-family: Open Sans;
 font-style: normal;
@@ -176,12 +180,13 @@ font-weight: normal;
 font-size: 14px;
 line-height: 100%;
 }
-.nav-bar li:first-child{
+.nav-bar a:first-child{
 background-color: #E0001B;
 color: #fff;
-padding-right: 15px;
+padding-left: 16px;
+padding-right: 22px;
 }
-.nav-bar #catalog{
+.nav-bar a:first-child li{
 	color: #fff;
 	font-family: Open Sans;
 font-style: normal;
@@ -189,20 +194,54 @@ font-weight: normal;
 font-size: 16px;
 padding-left: 15px;
 }
-
-.nav-bar #sale{
-	color: #E0001B;
-	font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 100%;
-}
 .container{
 	width: 1120px;
 	margin: 0 auto;
 }
-.school{
-	background: #1D1D1B;
-	background: rgba(0,0,0,.1);
+.nav-bar a:nth-child(2){
+	padding-left: 24px;
+	padding-right: 8px;
+}
+.nav-bar a:nth-child(2) li{
+	padding-left: 8px;
+}
+.nav-bar a:nth-child(3){
+	padding-left: 24px;
+	padding-right: 16px;
+}
+.nav-bar a:nth-child(3) li{
+	padding-left:8px;
+}
+.nav-bar a:nth-child(4){
+padding-left: 17.31px;
+	padding-right: 16px;
+}
+.nav-bar a:nth-child(4) li{
+	padding-left:9.28px;
+}
+.nav-bar a:nth-child(5){
+padding-right: 8px;
+padding-left: 16px;
+}
+.nav-bar a:nth-child(5) li{
+padding-left: 8px;
+}
+.nav-bar a:last-child{
+padding-right:16px;
+padding-left:24px;
+
+}
+.nav-bar a:last-child li{
+
+padding-left:8px;
+	font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 100%;
+color: #E0001B;
+}
+.nav-bar a:focus{
+	background-color: rgba(0,0,0,.01);
+
 }
