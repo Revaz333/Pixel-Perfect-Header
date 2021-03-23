@@ -68,11 +68,13 @@ margin-left: 19px;
 	padding-top: 3px;
 }
 .second-line span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #E0001B;
 	height: 17px;
 	width: 17px;
 	border-radius: 50%;
-	text-align: center;
 	color: #fff;
 	font-family: Open Sans;
 font-style: normal;
